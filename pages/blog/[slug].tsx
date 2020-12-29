@@ -1,12 +1,7 @@
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPosts, getPostBySlug } from 'lib/api';
-import { Post, PostFields } from 'interfaces/blogProps';
+import { Post } from 'interfaces/blogProps';
 import PageLayout from 'components/layouts/PageLayout';
-
-interface Params {
-    params: {
-        slug: string;
-    };
-}
 
 interface PostDetail {
     coverImage: {
@@ -23,15 +18,6 @@ interface PostDetail {
     title: string;
 }
 
-interface StaticProps {
-    props: PostFields;
-}
-
-interface StaticPaths {
-    paths: string[];
-    fallback: boolean;
-}
-
 const PostDetail: React.FC<PostDetail> = ({ title }) => {
     return (
         <PageLayout>
@@ -41,7 +27,7 @@ const PostDetail: React.FC<PostDetail> = ({ title }) => {
     );
 };
 
-export async function getStaticProps({ params }: Params): Promise<StaticProps> {
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
     const post = await getPostBySlug(params.slug);
     return {
         props: {
@@ -51,9 +37,9 @@ export async function getStaticProps({ params }: Params): Promise<StaticProps> {
             contents: post.fields.content.content,
         },
     };
-}
+};
 
-export async function getStaticPaths(): Promise<StaticPaths> {
+export const getStaticPaths: GetStaticPaths = async () => {
     const posts = await getAllPosts();
     const paths = posts?.map((post: Post) => {
         return {
@@ -64,6 +50,6 @@ export async function getStaticPaths(): Promise<StaticPaths> {
         paths,
         fallback: false,
     };
-}
+};
 
 export default PostDetail;

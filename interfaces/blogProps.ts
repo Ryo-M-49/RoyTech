@@ -23,15 +23,6 @@ interface CoverImage {
     };
 }
 
-export interface PostFields {
-    author: Author;
-    content: Contents;
-    coverImage: CoverImage;
-    date: Date;
-    slug: string;
-    title: string;
-}
-
 export interface Post {
     fields: {
         author: Author;

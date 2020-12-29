@@ -1,12 +1,9 @@
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import PageLayout from 'components/layouts/PageLayout';
 import Post from 'components/blog/Post';
 import { Props } from 'interfaces/blogProps';
 import { getAllPosts } from 'lib/api';
-
-interface StaticProps {
-    props: Props;
-}
 
 const Blog: React.FC<Props> = ({ posts }) => {
     return (
@@ -28,7 +25,7 @@ const Blog: React.FC<Props> = ({ posts }) => {
     );
 };
 
-export const getStaticProps = async (): Promise<StaticProps> => {
+export const getStaticProps: GetStaticProps = async () => {
     const posts = await getAllPosts();
     return {
         props: {

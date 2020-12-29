@@ -4,7 +4,9 @@ import "tailwindcss/tailwind.css";
 const About: React.FC = () => {
     return (
         <PageLayout>
-            <h1>About</h1>
+            <div className="w-100 min-h-full flex flex-col justify-center text-center">
+                <h1 className="text-7xl">We are<br></br>under construction.</h1>
+            </div>
         </PageLayout>
     );
 }

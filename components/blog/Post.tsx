@@ -1,8 +1,7 @@
-// const Hello: React.FC = () => <h1>HelloWorld!</h1>;
+import { Post as IPost } from 'interfaces/blogProps';
 
-// export default Hello;
+const Post: React.FC<IPost> = ({ fields }) => {
 
-const Post: React.FC = () => {
   return (
     <div className="Post">
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -12,12 +11,18 @@ const Post: React.FC = () => {
           alt="Sunset in the mountains"
         ></img>
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <div className="font-bold text-xl mb-2">{fields.title}</div>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
           </p>
+            {/* {fields.content.content.map(element => {
+                element.content.map(detail => {
+                  return(
+                    <p className="text-gray-700 text-base">{detail.value}</p>
+                  );
+                })
+              })
+            } */}
         </div>
         <div className="px-6 py-4">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">

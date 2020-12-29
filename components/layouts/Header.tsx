@@ -39,7 +39,7 @@ const Header = () => {
     }
 
     return (
-        <header className="py-5 px-5 shadow-lg">
+        <header className="py-5 px-5 ">
             <div className="flex justify-between items-center">
                 <Link href="/">
                     <a className="text-2xl">Blog<span className="text-sm">.com</span></a>

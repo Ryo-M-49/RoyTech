@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Top: React.FC = () => {
     return (
         <div className="w-100 min-h-full flex flex-col justify-center text-center">

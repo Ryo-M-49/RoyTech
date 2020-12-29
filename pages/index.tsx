@@ -7,5 +7,5 @@ const Home: React.FC = () => {
             <Top />
         </PageLayout>
     );
-}
+};
 export default Home;

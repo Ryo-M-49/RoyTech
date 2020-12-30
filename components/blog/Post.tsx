@@ -1,3 +1,4 @@
+import React from 'react';
 import { Post as IPost } from 'interfaces/blogProps';
 
 const Post: React.FC<IPost> = ({ fields }) => {
@@ -9,11 +10,11 @@ const Post: React.FC<IPost> = ({ fields }) => {
                 alt="Sunset in the mountains"
             ></img>
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{fields.title}</div>
-                <p className="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
+                <div data-testid="title" className="font-bold text-xl mb-2">
+                    {fields.title}
+                </div>
+                <p data-testid="content" className="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet
                 </p>
                 {/* {fields.content.content.map(element => {
                 element.content.map(detail => {

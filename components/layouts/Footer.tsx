@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Footer: React.FC = () => {
     return (
         <footer className="text-white text-center page-footer p-2 bg-blue-600 bg-gradient-to-r from-indigo-900">
@@ -6,6 +8,7 @@ const Footer: React.FC = () => {
                     href="https://twitter.com/Ryo_Code"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-testid="twitter"
                 >
                     Twitter
                 </a>

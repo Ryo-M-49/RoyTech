@@ -17,16 +17,20 @@
       "ts", 
       "tsx"
     ],
+    "moduleDirectories": [
+      ".",
+      "node_modules"
+    ],
     "transform": {
       "^.+\\.(t|j)(s|sx)?$": "ts-jest"
     },
     "globals": {
       "ts-jest": {
-        "tsConfig": "tsconfig.json"
+        "tsconfig": "tsconfig.json"
       }
     },
     "testMatch": [
-      "**/tests/*.test.tsx"
+      "**/tests/**/*.test.*"
     ],
     "setupFiles": ["./tests/setupTest.ts"]
   },

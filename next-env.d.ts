@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /// <reference types="next" />
 /// <reference types="next/types/global" />
 import React from 'react';

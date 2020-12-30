@@ -3,7 +3,7 @@ name: CI
 # タイミングを指定
 on:
   pull_request:
-    types: [opened, synchronize]
+    branches: [ master, develop ]
 
 jobs:
   build:

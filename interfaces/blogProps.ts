@@ -8,13 +8,13 @@ interface Author {
     };
 }
 
-interface Contents {
-    content: [
-        {
-            value: string;
-        }
-    ];
-}
+// interface Contents {
+//     content: [
+//         {
+//             value: string;
+//         }
+//     ];
+// }
 
 interface CoverImage {
     fields: {
@@ -26,7 +26,7 @@ interface CoverImage {
 export interface Post {
     fields: {
         author: Author;
-        content: Contents;
+        // content: Contents;
         coverImage: CoverImage;
         date: Date;
         slug: string;

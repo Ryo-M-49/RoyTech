@@ -2,8 +2,10 @@ name: CI
 
 # タイミングを指定
 on:
+  push:
+    branches: [ main, develop ]
   pull_request:
-    branches: [ master, develop ]
+    branches: [ main, develop ]
 
 jobs:
   build:

@@ -11,10 +11,10 @@
   },
   "jest": {
     "moduleFileExtensions": [
-      "js", 
-      "jsx", 
-      "json", 
-      "ts", 
+      "js",
+      "jsx",
+      "json",
+      "ts",
       "tsx"
     ],
     "moduleDirectories": [
@@ -32,9 +32,13 @@
     "testMatch": [
       "**/tests/**/*.test.*"
     ],
-    "setupFiles": ["./tests/setupTest.ts"]
+    "setupFiles": [
+      "./tests/setupTest.ts"
+    ]
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "@contentful/rich-text-types": "^14.1.2",
     "@headlessui/react": "^0.2.0",
     "autoprefixer": "^10.1.0",
     "contentful": "^8.1.5",

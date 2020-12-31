@@ -1,7 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPosts, getPostBySlug } from 'lib/api';
-import { Post } from 'interfaces/blogProps';
+import { Post, Contents } from 'interfaces/blogProps';
 import PageLayout from 'components/layouts/PageLayout';
+import RichText from 'components/blog/RichText';
 
 interface PostDetail {
     coverImage: {
@@ -16,13 +17,15 @@ interface PostDetail {
         name: string;
     };
     title: string;
+    contents: Contents;
 }
 
-const PostDetail: React.FC<PostDetail> = ({ title }) => {
+const PostDetail: React.FC<PostDetail> = ({ title, contents }) => {
     return (
         <PageLayout>
             {/* {/* <h1>{props.fields.title}</h1> */}
             <h1>{title}</h1>
+            <RichText content={contents} />
         </PageLayout>
     );
 };

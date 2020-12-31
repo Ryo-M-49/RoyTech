@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Hamburger from 'hamburger-react';
@@ -12,7 +13,7 @@ const Header: React.FC = () => {
     if (isOpen) {
         spNav = (
             <nav className="md:hidden text-xl transition duration-500 ease-in-out transform">
-                <ul>
+                <ul data-testid="ul">
                     <li
                         className={`transition duration-500 ease-in-out transform hover:translate-x-2 border-b my-4 ${
                             router.pathname == '/'

@@ -8,13 +8,21 @@ interface Author {
     };
 }
 
-// interface Contents {
-//     content: [
-//         {
-//             value: string;
-//         }
-//     ];
-// }
+export interface Contents {
+    content: [
+        {
+            content: [
+                {
+                    nodeType: string;
+                    value: string;
+                }
+            ];
+            nodeType: string;
+        }
+    ];
+    data: Record<string, unknown>;
+    nodeType: string;
+}
 
 interface CoverImage {
     fields: {
@@ -26,7 +34,7 @@ interface CoverImage {
 export interface Post {
     fields: {
         author: Author;
-        // content: Contents;
+        content: Contents;
         coverImage: CoverImage;
         date: Date;
         slug: string;

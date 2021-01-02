@@ -16,14 +16,6 @@ const Post: React.FC<IPost> = ({ fields }) => {
                 <p data-testid="content" className="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet
                 </p>
-                {/* {fields.content.content.map(element => {
-                element.content.map(detail => {
-                  return(
-                    <p className="text-gray-700 text-base">{detail.value}</p>
-                  );
-                })
-              })
-            } */}
             </div>
             <div className="px-6 py-4">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">

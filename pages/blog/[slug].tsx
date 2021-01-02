@@ -4,7 +4,7 @@ import { Post, Contents } from 'interfaces/blogProps';
 import PageLayout from 'components/layouts/PageLayout';
 import RichText from 'components/blog/RichText';
 
-interface PostDetail {
+interface Props {
     coverImage: {
         file: string;
         title: string;
@@ -16,14 +16,13 @@ interface PostDetail {
         };
         name: string;
     };
-    title: string;
     contents: Contents;
+    title: string;
 }
 
-const PostDetail: React.FC<PostDetail> = ({ title, contents }) => {
+const PostDetail: React.FC<Props> = ({ title, contents }) => {
     return (
         <PageLayout>
-            {/* {/* <h1>{props.fields.title}</h1> */}
             <h1>{title}</h1>
             <RichText content={contents} />
         </PageLayout>

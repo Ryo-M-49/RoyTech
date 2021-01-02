@@ -9,19 +9,16 @@ interface Author {
 }
 
 export interface Contents {
-    content: [
-        {
-            content: [
-                {
-                    nodeType: string;
-                    value: string;
-                }
-            ];
+    content: {
+        content: {
             nodeType: string;
-        }
-    ];
-    data: Record<string, unknown>;
-    nodeType: string;
+            value: string;
+            data: { [s: string]: string };
+            marks: { type: string }[];
+        }[];
+        nodeType: string;
+        data: { [s: string]: string };
+    }[];
 }
 
 interface CoverImage {

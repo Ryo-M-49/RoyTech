@@ -15,6 +15,22 @@ const fields = {
                 name: 'Ryo M',
             },
         },
+        content: {
+            content: [
+                {
+                    nodeType: 'paragraph',
+                    data: {},
+                    content: [
+                        {
+                            nodeType: 'text',
+                            value: 'Hello',
+                            data: {},
+                            marks: [{ type: 'bold' }],
+                        },
+                    ],
+                },
+            ],
+        },
         coverImage: {
             fields: {
                 file: 'https://test.com',

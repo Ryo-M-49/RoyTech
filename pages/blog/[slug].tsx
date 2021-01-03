@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPosts, getPostBySlug } from 'lib/api';
-import { Post, Contents } from 'interfaces/blogProps';
+import { Post } from 'interfaces/blogProps';
 import PageLayout from 'components/layouts/PageLayout';
-import RichText from 'components/blog/RichText';
+import MarkdownText from 'components/blog/MarkdownText';
 
 interface Props {
     coverImage: {
@@ -16,15 +16,15 @@ interface Props {
         };
         name: string;
     };
-    contents: Contents;
+    markdown: string;
     title: string;
 }
 
-const PostDetail: React.FC<Props> = ({ title, contents }) => {
+const PostDetail: React.FC<Props> = ({ title, markdown }) => {
     return (
         <PageLayout>
             <h1>{title}</h1>
-            <RichText content={contents} />
+            <MarkdownText content={markdown} />
         </PageLayout>
     );
 };
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
             coverImage: post.fields.coverImage.fields,
             author: post.fields.author.fields,
             title: post.fields.title,
-            contents: post.fields.content.content,
+            markdown: post.fields.markdown,
         },
     };
 };

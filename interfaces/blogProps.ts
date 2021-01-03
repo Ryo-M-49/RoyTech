@@ -8,18 +8,18 @@ interface Author {
     };
 }
 
-export interface Contents {
-    content: {
-        content: {
-            nodeType: string;
-            value: string;
-            data: { [s: string]: string };
-            marks: { type: string }[];
-        }[];
-        nodeType: string;
-        data: { [s: string]: string };
-    }[];
-}
+// export interface Contents {
+//     content: {
+//         content: {
+//             nodeType: string;
+//             value: string;
+//             data: { [s: string]: string };
+//             marks: { type: string }[];
+//         }[];
+//         nodeType: string;
+//         data: { [s: string]: string };
+//     }[];
+// }
 
 interface CoverImage {
     fields: {
@@ -31,9 +31,9 @@ interface CoverImage {
 export interface Post {
     fields: {
         author: Author;
-        content: Contents;
         coverImage: CoverImage;
         date: Date;
+        content: string;
         slug: string;
         title: string;
     };

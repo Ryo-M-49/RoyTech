@@ -22,15 +22,15 @@ const Text: React.FC<Props> = ({ children }) => (
 );
 
 const Heading1: React.FC<Props> = ({ children }) => (
-    <h1 className="inline-block text-4xl my-4 ">{children}</h1>
+    <h1 className="inline-block text-4xl my-4">{children}</h1>
 );
 
 const Heading2: React.FC<Props> = ({ children }) => (
-    <h2 className="inline-block text-3xl my-2 ">{children}</h2>
+    <h2 className="inline-block text-3xl my-2">{children}</h2>
 );
 
 const Heading3: React.FC<Props> = ({ children }) => (
-    <h3 className="inline-block text-2xl my-2 ">{children}</h3>
+    <h3 className="inline-block text-2xl my-2">{children}</h3>
 );
 
 const Heading4: React.FC<Props> = ({ children }) => (
@@ -42,9 +42,7 @@ const Heading5: React.FC<Props> = ({ children }) => (
 );
 
 const Heading6: React.FC<Props> = ({ children }) => (
-    <h6 className="inline-block text-xl my-2 border-b border-blue-600">
-        {children}
-    </h6>
+    <h6 className="inline-block text-xl my-2">{children}</h6>
 );
 
 const Ul: React.FC<Props> = ({ children }) => (
@@ -139,7 +137,6 @@ const options = {
 };
 
 const RichText: React.FC<any> = (props) => {
-    console.log(props);
     const richText = documentToReactComponents(props, options);
     return <div className="text-gray-700 leading-relaxed">{richText}</div>;
 };

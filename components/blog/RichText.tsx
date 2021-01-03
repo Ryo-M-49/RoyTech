@@ -2,19 +2,20 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 import { ReactNode } from 'react';
 
-interface Node {
-    content: {
-        data: { key: string };
-        nodeType: string;
-        value: string;
-        marks: { key: string }[];
-    }[];
-    data: { uri: string };
-    nodeType: string;
-}
+// interface Node {
+//     content: {
+//         data: Record<string, string>;
+//         nodeType: string;
+//         value: string;
+//         marks: Record<string, string>[];
+//     }[];
+//     data: Record<string, string>;
+//     nodeType: string;
+// }
 
+// ReactNodeを指定するとエラーになるのでいったんany
 interface Props {
-    node?: Node;
+    node?: any;
     children: ReactNode;
 }
 
@@ -43,22 +44,25 @@ const HyperLink: React.FC<Props> = ({ node, children }) => (
 
 const options = {
     renderMark: {
-        [MARKS.BOLD]: function bold(text: string) {
+        [MARKS.BOLD]: function bold(text: ReactNode) {
             return <Bold>{text}</Bold>;
         },
     },
     renderNode: {
         [BLOCKS.PARAGRAPH]: function paragraph(
-            node: Node,
+            node: ReactNode,
             children: ReactNode
         ) {
             return <Text>{children}</Text>;
         },
-        [BLOCKS.HEADING_1]: function heading1(node: Node, children: ReactNode) {
+        [BLOCKS.HEADING_1]: function heading1(
+            node: ReactNode,
+            children: ReactNode
+        ) {
             return <Heading1>{children}</Heading1>;
         },
         [INLINES.HYPERLINK]: function hyperlink(
-            node: Node | undefined,
+            node: any,
             children: ReactNode
         ) {
             return <HyperLink node={node}>{children}</HyperLink>;

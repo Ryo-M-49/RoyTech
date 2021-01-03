@@ -10,17 +10,17 @@ const options = {
     overrides: {
         h1: {
             props: {
-                className: 'inline-block text-4xl my-4',
+                className: 'inline-block text-4xl my-6',
             },
         },
         h2: {
             props: {
-                className: 'inline-block text-3xl my-2',
+                className: 'inline-block text-3xl my-4',
             },
         },
         h3: {
             props: {
-                className: 'inline-block text-2xl my-2',
+                className: 'inline-block text-2xl my-4',
             },
         },
         h4: {
@@ -65,7 +65,7 @@ const MarkdownText: React.FC<Props> = ({ content }) => {
     }, []);
 
     return (
-        <div className="text-gray-700 leading-relaxed">
+        <div className="text-gray-700 leading-7">
             <Markdown options={options}>{content}</Markdown>
         </div>
     );

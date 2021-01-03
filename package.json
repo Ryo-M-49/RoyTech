@@ -37,6 +37,7 @@
     ]
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^14.1.2",
     "@contentful/rich-text-react-renderer": "^14.1.2",
     "@contentful/rich-text-types": "^14.1.2",
     "@headlessui/react": "^0.2.0",

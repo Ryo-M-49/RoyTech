@@ -6,7 +6,6 @@ import { Props } from 'interfaces/blogProps';
 import { getAllPosts } from 'lib/api';
 
 const Blog: React.FC<Props> = ({ posts }) => {
-    console.log(posts);
     return (
         <PageLayout>
             <div className="flex flex-wrap justify-center -mr-5">

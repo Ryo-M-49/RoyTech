@@ -15,29 +15,26 @@ const fields = {
                 name: 'Ryo M',
             },
         },
-        content: {
-            content: [
-                {
-                    nodeType: 'paragraph',
-                    data: {},
-                    content: [
-                        {
-                            nodeType: 'text',
-                            value: 'Hello',
-                            data: {},
-                            marks: [{ type: 'bold' }],
-                        },
-                    ],
-                },
-            ],
-        },
+        description: 'ディスクリプションです。',
+        markdown: '# テストです',
         coverImage: {
             fields: {
-                file: 'https://test.com',
-                title: 'blog post image',
+                file: {
+                    contentType: 'string',
+                    details: {
+                        image: {
+                            width: 64,
+                            height: 64,
+                        },
+                        size: 64,
+                    },
+                    fileName: 'カバーイメージ',
+                    url: '//images.jpg',
+                },
+                title: 'イメージ',
             },
         },
-        date: new Date(),
+        date: '2020-12-20',
         slug: 'test-post',
         title: 'post title',
     },
@@ -52,7 +49,7 @@ describe('Post component tests', () => {
 
     test('renders post content', () => {
         expect(wrapper.find(select('content')).text()).toEqual(
-            'Lorem ipsum dolor sit amet'
+            'ディスクリプションです。'
         );
     });
 });

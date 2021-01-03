@@ -4,11 +4,11 @@ import { MAX_TITLE_LENGTH, MAX_DESCRIPTION_LENGTH } from 'lib/config';
 
 const Post: React.FC<IPost> = ({ fields }) => {
     return (
-        <div className="max-w-xs rounded overflow-hidden shadow-lg cursor-pointer">
+        <div className="md:max-w-xs rounded overflow-hidden shadow-md cursor-pointer transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
             <img
-                className="w-full"
-                src="https://source.unsplash.com/random/1600x900/"
-                alt="Sunset in the mountains"
+                className="w-full h-40 object-cover"
+                src={`https:${fields.coverImage.fields.file.url}`}
+                alt={fields.coverImage.fields.title}
             ></img>
             <div className="px-6 py-4">
                 <div data-testid="title" className="font-bold text-xl mb-2">

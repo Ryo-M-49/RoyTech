@@ -45,7 +45,6 @@ const PostDetail: React.FC<Props> = ({
     title,
     date,
 }) => {
-    console.log(date);
     return (
         <PageLayout>
             <div className="md:w-3/4 mx-auto">

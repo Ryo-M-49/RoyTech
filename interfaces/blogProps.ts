@@ -30,13 +30,10 @@ export interface Post {
     fields: {
         author: Author;
         coverImage: CoverImage;
+        description: string;
         date: string;
-        content: string;
+        markdown: string;
         slug: string;
         title: string;
     };
-}
-
-export interface Props {
-    posts: Post[];
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Post as IPost } from 'interfaces/blogProps';
+import { MAX_TITLE_LENGTH, MAX_DESCRIPTION_LENGTH } from 'lib/config';
 
 const Post: React.FC<IPost> = ({ fields }) => {
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg cursor-pointer">
+        <div className="max-w-xs rounded overflow-hidden shadow-lg cursor-pointer">
             <img
                 className="w-full"
                 src="https://source.unsplash.com/random/1600x900/"
@@ -11,10 +12,15 @@ const Post: React.FC<IPost> = ({ fields }) => {
             ></img>
             <div className="px-6 py-4">
                 <div data-testid="title" className="font-bold text-xl mb-2">
-                    {fields.title}
+                    {fields.title.length > MAX_TITLE_LENGTH
+                        ? fields.title.substr(0, MAX_TITLE_LENGTH) + '...'
+                        : fields.title}
                 </div>
                 <p data-testid="content" className="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet
+                    {fields.description.length > MAX_DESCRIPTION_LENGTH
+                        ? fields.description.substr(0, MAX_DESCRIPTION_LENGTH) +
+                          '...'
+                        : fields.description}
                 </p>
             </div>
             <div className="px-6 py-4">

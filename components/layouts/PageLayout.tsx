@@ -16,6 +16,7 @@ const PageLayout: React.FC<Props> = ({ children, className }) => {
                     content="width=device-width, initial-scale=1.0"
                 />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+                <link rel="shortcut icon" href="/favicon.ico" />
                 <title>RoyTech.com</title>
             </Head>
             <body className="flex flex-col h-screen w-full bg-gray-100">

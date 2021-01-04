@@ -12,43 +12,65 @@ interface Props extends IPost {
 }
 
 const Post: React.FC<Props> = ({ fields, isTopPost }) => {
-    const maxTitleLength = isTopPost ? MAX_TOP_TITLE_LENGTH : MAX_TITLE_LENGTH;
-    const maxDescriptionLength = isTopPost
-        ? MAX_TOP_DESCRIPTION_LENGTH
-        : MAX_DESCRIPTION_LENGTH;
-    return (
-        <div className="rounded overflow-hidden shadow-md cursor-pointer transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg bg-white">
+    let component = (
+        <div className="h-96 rounded overflow-hidden shadow-md cursor-pointer transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg bg-white">
             <img
-                className={`w-full object-cover ${isTopPost ? 'h-60' : 'h-40'}`}
+                className="w-full object-cover h-40"
                 src={`https:${fields.coverImage.fields.file.url}`}
                 alt={fields.coverImage.fields.title}
-            ></img>
+            />
             <div className="px-6 py-4">
-                <div data-testid="title" className="font-bold text-xl mb-2">
-                    {fields.title.length > maxTitleLength
-                        ? fields.title.substr(0, maxTitleLength) + '...'
+                <div data-testid="title" className="font-bold text-xl mb-1">
+                    {fields.title.length > MAX_TITLE_LENGTH
+                        ? fields.title.substr(0, MAX_TITLE_LENGTH) + '...'
                         : fields.title}
                 </div>
+                <p className="font-thin mb-1">{fields.date.substr(0, 10)}</p>
                 <p data-testid="content" className="text-gray-700 text-base">
-                    {fields.description.length > maxDescriptionLength
-                        ? fields.description.substr(0, maxDescriptionLength) +
+                    {fields.description.length > MAX_DESCRIPTION_LENGTH
+                        ? fields.description.substr(0, MAX_DESCRIPTION_LENGTH) +
                           '...'
                         : fields.description}
                 </p>
             </div>
-            <div className="px-6 py-4">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #photography
-                </span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #travel
-                </span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                    #winter
-                </span>
-            </div>
         </div>
     );
+
+    if (isTopPost) {
+        component = (
+            <div className="md:flex xs:h-96 md:h-80 rounded overflow-hidden shadow-md cursor-pointer transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg bg-white">
+                <img
+                    className="w-full object-cover h-40 md:h-60 my-auto"
+                    src={`https:${fields.coverImage.fields.file.url}`}
+                    alt={fields.coverImage.fields.title}
+                />
+                <div className="px-6 py-4">
+                    <h2 data-testid="title" className="font-bold text-xl mb-1">
+                        {fields.title.length > MAX_TOP_TITLE_LENGTH
+                            ? fields.title.substr(0, MAX_TOP_TITLE_LENGTH) +
+                              '...'
+                            : fields.title}
+                    </h2>
+                    <p className="font-thin mb-1">
+                        {fields.date.substr(0, 10)}
+                    </p>
+                    <p
+                        data-testid="content"
+                        className="text-gray-700 text-base"
+                    >
+                        {fields.description.length > MAX_TOP_DESCRIPTION_LENGTH
+                            ? fields.description.substr(
+                                  0,
+                                  MAX_TOP_DESCRIPTION_LENGTH
+                              ) + '...'
+                            : fields.description}
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
+    return <>{component}</>;
 };
 
 export default Post;

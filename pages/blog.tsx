@@ -30,32 +30,34 @@ const Blog: React.FC<Props> = ({ posts }) => {
                     Life with engineering and technology.
                 </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-10 max-w-5xl mx-auto p-3">
-                {posts.map((post, key) => {
-                    {
-                        key == 0 ? (isTopPost = true) : (isTopPost = false);
-                    }
-                    return (
-                        <Link
-                            key={key}
-                            href="/blog/[slug]"
-                            as={`/blog/${String(post.fields.slug)}`}
-                        >
-                            <div
-                                className={`mt-5 ${
-                                    key == 0
-                                        ? 'sm:col-span-2 lg:col-span-3'
-                                        : ''
-                                }`}
+            <div className="mx-5">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto p-3">
+                    {posts.map((post, key) => {
+                        {
+                            key == 0 ? (isTopPost = true) : (isTopPost = false);
+                        }
+                        return (
+                            <Link
+                                key={key}
+                                href="/blog/[slug]"
+                                as={`/blog/${String(post.fields.slug)}`}
                             >
-                                <Post
-                                    fields={post.fields}
-                                    isTopPost={isTopPost}
-                                />
-                            </div>
-                        </Link>
-                    );
-                })}
+                                <div
+                                    className={`mt-5 ${
+                                        key == 0
+                                            ? 'sm:col-span-2 lg:col-span-3'
+                                            : ''
+                                    }`}
+                                >
+                                    <Post
+                                        fields={post.fields}
+                                        isTopPost={isTopPost}
+                                    />
+                                </div>
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
         </PageLayout>
     );

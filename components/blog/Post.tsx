@@ -40,7 +40,7 @@ const Post: React.FC<Props> = ({ fields, isTopPost }) => {
         component = (
             <div className="md:flex xs:h-96 md:h-80 rounded overflow-hidden shadow-md cursor-pointer transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg bg-white">
                 <img
-                    className="w-full object-cover h-40 md:h-60 my-auto"
+                    className="object-cover md:w-1/2"
                     src={`https:${fields.coverImage.fields.file.url}`}
                     alt={fields.coverImage.fields.title}
                 />

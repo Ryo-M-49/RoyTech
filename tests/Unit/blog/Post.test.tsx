@@ -38,6 +38,7 @@ const fields = {
         slug: 'test-post',
         title: 'post title',
     },
+    isTopPost: false,
 };
 
 const wrapper = shallow(<Post {...fields} />);

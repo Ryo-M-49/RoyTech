@@ -25,7 +25,7 @@ const Author: React.FC<Props> = ({ author, date }) => {
             />
             <div className="ml-3">
                 <p>{author.name}</p>
-                <p>更新日: {date.substr(0, 10)}</p>
+                <p>Date: {date.substr(0, 10)}</p>
             </div>
         </div>
     );

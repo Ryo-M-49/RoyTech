@@ -18,10 +18,10 @@ const PageLayout: React.FC<Props> = ({ children, className }) => {
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <title>RoyTech.com</title>
             </Head>
-            <body className="flex flex-col h-screen w-full">
+            <body className="flex flex-col h-screen w-full bg-gray-100">
                 <Header />
                 <div
-                    className={`flex-1 overflow-y-auto page-wrapper p-5 ${className}`}
+                    className={`flex-1 overflow-y-auto page-wrapper ${className}`}
                 >
                     {children}
                 </div>

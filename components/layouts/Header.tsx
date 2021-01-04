@@ -68,7 +68,7 @@ const Header: React.FC = () => {
             <div className="flex justify-between items-center">
                 <Link href="/">
                     <a className="text-2xl">
-                        Blog<span className="text-sm">.com</span>
+                        RoyTech<span className="text-sm">.com</span>
                     </a>
                 </Link>
                 {/* PC向けnav */}

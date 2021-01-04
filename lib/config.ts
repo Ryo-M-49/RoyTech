@@ -1,4 +1,4 @@
 export const MAX_TITLE_LENGTH = 35;
-export const MAX_TOP_TITLE_LENGTH = 100;
-export const MAX_DESCRIPTION_LENGTH = 83;
-export const MAX_TOP_DESCRIPTION_LENGTH = 250;
+export const MAX_DESCRIPTION_LENGTH = 58;
+export const MAX_TOP_TITLE_LENGTH = 150;
+export const MAX_TOP_DESCRIPTION_LENGTH = 400;

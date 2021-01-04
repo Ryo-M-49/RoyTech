@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
     return (
@@ -31,7 +32,9 @@ const Footer: React.FC = () => {
             </div>
             <p className="my-2">
                 &copy; {new Date().getFullYear()} Copyright:{' '}
-                <a href="#"> blog.com </a>
+                <Link href="/">
+                    <a> roytech.com </a>
+                </Link>
             </p>
         </footer>
     );

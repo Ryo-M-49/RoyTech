@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Header from 'components/layouts/Header';
 import Footer from 'components/layouts/Footer';
 import 'tailwindcss/tailwind.css';
@@ -10,16 +9,7 @@ type Props = {
 const PageLayout: React.FC<Props> = ({ children, className }) => {
     return (
         <>
-            <Head>
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1.0"
-                />
-                <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-                <link rel="shortcut icon" href="/favicon.ico" />
-                <title>RoyTech.com</title>
-            </Head>
-            <body className="flex flex-col h-screen w-full bg-gray-100">
+            <div className="flex flex-col h-screen w-full bg-gray-100">
                 <Header />
                 <div
                     className={`flex-1 overflow-y-auto page-wrapper ${className}`}
@@ -27,7 +17,7 @@ const PageLayout: React.FC<Props> = ({ children, className }) => {
                     {children}
                 </div>
                 <Footer />
-            </body>
+            </div>
         </>
     );
 };

@@ -49,7 +49,7 @@ const PostDetail: React.FC<Props> = ({
         <PageLayout>
             <div className="md:w-3/4 mx-auto mb-10">
                 <PageTop coverImage={coverImage} title={title} />
-                <div className="w-3/4 mx-auto">
+                <div className="md:w-3/4 px-3 md:mx-auto">
                     <div className="mt-5">
                         <Author author={author} date={date} />
                     </div>

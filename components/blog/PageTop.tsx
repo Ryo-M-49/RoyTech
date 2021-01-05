@@ -29,7 +29,7 @@ const PageTop: React.FC<Props> = ({ coverImage, title }) => {
     return (
         <div className="flex h-80 items-center" style={style}>
             <div className="bg-black opacity-75 py-3 w-full">
-                <h1 className="text-center text-5xl text-white w-full">
+                <h1 className="text-center text-3xl md:text-5xl text-white w-full">
                     {title}
                 </h1>
             </div>

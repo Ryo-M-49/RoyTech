@@ -16,7 +16,7 @@ class MyDocument extends Document {
                     />
                     <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                     <link rel="shortcut icon" href="/favicon.ico" />
-                    <title>RoyTech.com</title>
+                    <title>RyoM.net</title>
                 </Head>
                 <body>
                     <Main />

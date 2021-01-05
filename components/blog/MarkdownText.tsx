@@ -66,7 +66,9 @@ const MarkdownText: React.FC<Props> = ({ content }) => {
 
     return (
         <div className="text-gray-700 leading-7">
-            <Markdown options={options}>{content}</Markdown>
+            <Markdown className="prose" options={options}>
+                {content}
+            </Markdown>
         </div>
     );
 };

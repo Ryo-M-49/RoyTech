@@ -123,7 +123,11 @@ const Header: React.FC = () => {
 
                 {/* SP向けハンバーガーメニュー */}
                 <div className="md:hidden">
-                    <Hamburger toggled={isOpen} toggle={setOpen} />
+                    <Hamburger
+                        toggled={isOpen}
+                        toggle={setOpen}
+                        label="hamburger-menu"
+                    />
                 </div>
             </div>
             {/* SP向けNav */}

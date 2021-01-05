@@ -43,6 +43,11 @@ const options = {
                 className: 'list-disc mx-10',
             },
         },
+        img: {
+            props: {
+                className: 'my-10',
+            },
+        },
         a: {
             props: {
                 className: 'text-blue-600',

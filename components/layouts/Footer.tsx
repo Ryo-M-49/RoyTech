@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <p className="my-1">
                 &copy; {new Date().getFullYear()} Copyright:{' '}
                 <Link href="/">
-                    <a> roytech.com </a>
+                    <a> ryo-m.net </a>
                 </Link>
             </p>
         </footer>

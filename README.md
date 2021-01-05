@@ -6,8 +6,8 @@
 
 
 # RoyTech
-RoyTech.com is my blog developed with Next.js, TypeScript, Tailwind CSS, and Contentful. 
-Feel free to raise a issue or pull request :)
+RoyTech.com is my blog developed with Next.js, TypeScript, Tailwind CSS, and Contentful. <br>
+Feel free to raise an issue or pull request :)
 
 # Showcase
 https://roy-tech.vercel.app

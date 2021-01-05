@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="text-white text-center page-footer p-2 bg-blue-600 bg-gradient-to-r from-indigo-900">
+        <footer className="text-white text-center page-footer p-1 bg-blue-600 bg-gradient-to-r from-indigo-900">
             <div>
                 <a
                     href="https://twitter.com/Ryo_Code"
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                     Qiita
                 </a>
             </div>
-            <p className="my-2">
+            <p className="my-1">
                 &copy; {new Date().getFullYear()} Copyright:{' '}
                 <Link href="/">
                     <a> roytech.com </a>

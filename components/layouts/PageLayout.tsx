@@ -16,8 +16,8 @@ const PageLayout: React.FC<Props> = ({ children, className }) => {
                 >
                     {children}
                 </div>
+                <Footer />
             </div>
-            <Footer />
         </>
     );
 };

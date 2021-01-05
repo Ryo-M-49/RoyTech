@@ -7,7 +7,7 @@ class MyDocument extends Document {
             <Html lang="ja-JP">
                 <Head>
                     <meta
-                        name="RoTech.com"
+                        name="description"
                         content="Life with engineering and technology."
                     />
                     <meta

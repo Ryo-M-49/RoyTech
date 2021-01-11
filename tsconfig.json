@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "react",
     "baseUrl": ".",
     "target": "es5",
     "lib": [

@@ -7,7 +7,10 @@ const Top: React.FC = () => {
             <div className="pt-24">
                 <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
                     <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                        <h1 className="my-4 text-5xl font-bold leading-tight">
+                        <h1
+                            data-testid="title"
+                            className="my-4 text-5xl font-bold leading-tight"
+                        >
                             Hi There! Wanna Talk with Me?
                         </h1>
                         <p className="leading-normal text-2xl mb-8">

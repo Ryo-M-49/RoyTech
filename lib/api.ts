@@ -41,3 +41,17 @@ export const getLimitedPosts = async (limit: number) => {
 
     console.log('Error getting Entries.');
 };
+
+export const getLimitedBooks = async (limit: number) => {
+    const entries = await client.getEntries({
+        content_type: 'book',
+        limit: limit,
+        order: '-fields.date',
+    });
+
+    if (entries.items) {
+        return entries.items;
+    }
+
+    console.log('Error getting Entries.');
+};

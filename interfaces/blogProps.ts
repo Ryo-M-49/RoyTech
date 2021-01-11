@@ -1,4 +1,4 @@
-interface Author {
+export interface Author {
     fields: {
         image: {
             fields: string;
@@ -8,7 +8,7 @@ interface Author {
     };
 }
 
-interface CoverImage {
+export interface CoverImage {
     fields: {
         file: {
             contentType: string;

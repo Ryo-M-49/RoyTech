@@ -27,6 +27,7 @@ const Top: React.FC = () => {
                         <img
                             className="w-full md:w-3/5 z-50"
                             src="coding.png"
+                            alt="coding"
                         />
                     </div>
                 </div>

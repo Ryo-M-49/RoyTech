@@ -16,9 +16,9 @@ const Work: React.FC = () => {
                         <img src="great_idea.png" alt="work" />
                     </div>
                     <div className="w-5/6 sm:w-1/2 p-6">
-                        <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+                        <h2 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                             Output is My Biggest Motivation
-                        </h3>
+                        </h2>
                         <p className="text-gray-600 mb-8 text-lg">
                             Learning is different from knowing. Making something
                             into shape with new technologies that I learn is my

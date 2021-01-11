@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Blog: React.FC<Props> = ({ posts }) => {
-    console.log(posts);
     return (
         <section className="bg-white py-8">
             <div className="container mx-auto flex flex-wrap pt-4 pb-12">

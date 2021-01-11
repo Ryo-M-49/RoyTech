@@ -1,15 +1,38 @@
+import React from 'react';
+import { GetStaticProps } from 'next';
+import { getLimitedBooks } from 'lib/api';
+import { BOOK_LIMIT } from 'lib/config';
+import { Book } from 'interfaces/bookProps';
 import PageLayout from 'components/layouts/PageLayout';
-import 'tailwindcss/tailwind.css';
+import Top from 'components/about/Top';
+import History from 'components/about/History';
+import CurrentlyReading from 'components/about/CurrentlyReading';
+import Sns from 'components/about/Sns';
 
-const About: React.FC = () => {
+interface Props {
+    books: Book[];
+}
+
+const About: React.FC<Props> = ({ books }) => {
     return (
         <PageLayout>
-            <div className="w-100 min-h-full flex flex-col justify-center text-center">
-                <h1 className="text-7xl">
-                    We are<br></br>under construction.
-                </h1>
+            <div className="w-full md:max-w-5xl md:mx-auto">
+                <Top />
+                <History />
+                <CurrentlyReading books={books} />
+                <Sns />
             </div>
         </PageLayout>
     );
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+    const books = await getLimitedBooks(BOOK_LIMIT);
+    return {
+        props: {
+            books: books ? books : null,
+        },
+    };
+};
+
 export default About;

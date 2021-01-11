@@ -9,7 +9,7 @@ type Props = {
 const PageLayout: React.FC<Props> = ({ children, className }) => {
     return (
         <>
-            <div className="flex flex-col h-screen w-full bg-gray-100">
+            <div className="flex flex-col h-screen w-full bg-white">
                 <Header />
                 <div
                     className={`flex-1 overflow-y-auto page-wrapper ${className}`}

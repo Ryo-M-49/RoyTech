@@ -9,7 +9,7 @@ const wrapper = shallow(<Top />);
 describe('Top component tests', () => {
     test('renders h1 tag', () => {
         expect(wrapper.find(select('title')).text()).toEqual(
-            'We areunder construction.'
+            'Hi There! Wanna Talk with Me?'
         );
     });
 });

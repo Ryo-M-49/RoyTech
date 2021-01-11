@@ -27,3 +27,17 @@ export const getPostBySlug = async (slug: string) => {
 
     console.log('Error getting the entry.');
 };
+
+export const getLimitedPosts = async (limit: number) => {
+    const entries = await client.getEntries({
+        content_type: 'post',
+        limit: limit,
+        order: '-fields.date',
+    });
+
+    if (entries.items) {
+        return entries.items;
+    }
+
+    console.log('Error getting Entries.');
+};

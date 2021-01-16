@@ -5,7 +5,7 @@ import { GA_TRACKING_ID } from 'lib/gtag';
 class MyDocument extends Document {
     render() {
         return (
-            <Html lang="ja-JP">
+            <Html lang="ja-JP" prefix="og: http://ogp.me/ns#">
                 <Head>
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script

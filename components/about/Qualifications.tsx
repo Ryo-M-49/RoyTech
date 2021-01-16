@@ -9,18 +9,18 @@ const Qualifications: React.FC = () => {
             <div className="w-full mb-4">
                 <div className="bg-blue-600 h-1 gradient w-64 opacity-25 my-0 py-0 rounded-t" />
             </div>
-            <ul className="list-insid text-xl">
+            <ul className="list-insid text-xl text-gray-800">
                 <li className="mb-5">
                     <p>TOEIC Listening and Reading 905</p>
-                    <p>- Apr. 2016</p>
+                    <p className="text-gray-500 text-base">- Apr. 2016</p>
                 </li>
                 <li className="justify-between md:w-2/3 mb-5">
                     <p>EIKEN Grade 1</p>
-                    <p>- Mar. 2017</p>
+                    <p className="text-gray-500 text-base">- Mar. 2017</p>
                 </li>
                 <li className="justify-between md:w-2/3 mb-5">
                     <p>LPIC1</p>
-                    <p>- Now Studying!</p>
+                    <p className="text-gray-500 text-base">- Now Studying!</p>
                 </li>
             </ul>
         </section>

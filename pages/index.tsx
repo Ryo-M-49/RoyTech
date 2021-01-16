@@ -14,10 +14,8 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ posts }) => {
-    console.log(posts);
-    console.log(HOME_POST_LIMIT);
     return (
-        <PageLayout>
+        <PageLayout ogTitle="RyoM.net">
             <Top />
             <About />
             <Work />

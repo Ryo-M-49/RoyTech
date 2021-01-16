@@ -36,6 +36,7 @@ interface Props {
     markdown: string;
     title: string;
     date: string;
+    slug: string;
 }
 
 const PostDetail: React.FC<Props> = ({
@@ -44,9 +45,10 @@ const PostDetail: React.FC<Props> = ({
     markdown,
     title,
     date,
+    slug,
 }) => {
     return (
-        <PageLayout>
+        <PageLayout ogTitle={title} ogPath={`/blog/${slug}`}>
             <div className="md:w-3/4 mx-auto mb-10">
                 <PageTop coverImage={coverImage} title={title} />
                 <div className="md:w-3/4 px-3 md:mx-auto">
@@ -69,6 +71,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
             title: post.fields.title,
             markdown: post.fields.markdown,
             date: post.fields.date,
+            slug: params.slug,
         },
     };
 };

@@ -8,6 +8,7 @@ type Props = {
     ogTitle?: string;
     ogImage?: string;
     ogPath?: string;
+    ogType?: 'website' | 'article';
 };
 
 const PageLayout: React.FC<Props> = ({
@@ -15,14 +16,14 @@ const PageLayout: React.FC<Props> = ({
     className,
     ogTitle,
     ogPath,
-    // ogImage,
+    ogType,
 }) => {
     const image = `https://ogi-api.vercel.app/${ogTitle}.png?theme=black&md=1&fontSize=130px&background=https://user-images.githubusercontent.com/57619070/104796316-8502ef00-57f8-11eb-8436-2f4ba5f82d25.jpg`;
     return (
         <>
             <Head>
                 <meta property="og:title" content={ogTitle} />
-                <meta property="og:type" content="blog" />
+                <meta property="og:type" content={ogType} />
                 <meta property="og:site_name" content="RyoM.net" />
                 <meta
                     property="og:url"

@@ -29,7 +29,7 @@ const PageLayout: React.FC<Props> = ({
                     property="og:url"
                     content={`https://ryo-m.net${ogPath}`}
                 />
-                <meta property="og:image" content={image} />
+                <meta property="og:image" content={encodeURI(image)} />
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:site" content="@tcr_jp" />
                 <meta
@@ -37,7 +37,7 @@ const PageLayout: React.FC<Props> = ({
                     content={`https://ryo-m.net${ogPath}`}
                 />
                 <meta name="twitter:title" content={ogTitle} />
-                <meta name="twitter:image" content={image} />
+                <meta name="twitter:image" content={encodeURI(image)} />
             </Head>
             <div className="flex flex-col h-screen w-full bg-white">
                 <Header />

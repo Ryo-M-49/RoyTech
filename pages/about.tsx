@@ -5,6 +5,8 @@ import { BOOK_LIMIT } from 'lib/config';
 import { Book } from 'interfaces/bookProps';
 import PageLayout from 'components/layouts/PageLayout';
 import Top from 'components/about/Top';
+import Skills from 'components/about/Skills';
+import Qualifications from 'components/about/Qualifications';
 import History from 'components/about/History';
 import CurrentlyReading from 'components/about/CurrentlyReading';
 import Sns from 'components/about/Sns';
@@ -18,6 +20,8 @@ const About: React.FC<Props> = ({ books }) => {
         <PageLayout ogTitle="About Me" ogPath="/about">
             <div className="w-full md:max-w-5xl md:mx-auto">
                 <Top />
+                <Skills />
+                <Qualifications />
                 <History />
                 <CurrentlyReading books={books} />
                 <Sns />

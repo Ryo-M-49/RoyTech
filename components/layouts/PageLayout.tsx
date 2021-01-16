@@ -15,10 +15,11 @@ const PageLayout: React.FC<Props> = ({
     children,
     className,
     ogTitle,
+    ogImage,
     ogPath,
     ogType,
 }) => {
-    const image = `https://ogi-api.vercel.app/${ogTitle}.png?theme=black&md=1&fontSize=130px&background=https://user-images.githubusercontent.com/57619070/104796316-8502ef00-57f8-11eb-8436-2f4ba5f82d25.jpg`;
+    const image = `https://ogi-api.vercel.app/.png?theme=black&md=1&fontSize=130px&background=${ogImage}`;
     return (
         <>
             <Head>

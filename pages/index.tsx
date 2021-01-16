@@ -15,7 +15,12 @@ interface Props {
 
 const Home: React.FC<Props> = ({ posts }) => {
     return (
-        <PageLayout ogTitle="RyoM.net" ogPath="" ogType="website">
+        <PageLayout
+            ogTitle="RyoM.net"
+            ogPath=""
+            ogType="website"
+            ogImage="https://user-images.githubusercontent.com/57619070/104796298-4ec56f80-57f8-11eb-81bb-8ad6a2676c70.png"
+        >
             <Top />
             <About />
             <Work />

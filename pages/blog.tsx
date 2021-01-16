@@ -18,7 +18,7 @@ const Blog: React.FC<Props> = ({ posts }) => {
     };
     let isTopPost = false;
     return (
-        <PageLayout>
+        <PageLayout ogTitle="Blog" ogPath="/blog">
             <div
                 className="w-full h-52 bg-gray-100 flex flex-col items-center justify-center"
                 style={style}

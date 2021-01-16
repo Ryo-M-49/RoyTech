@@ -7,7 +7,7 @@
 
 # RyoM.net
 RyoM.net is my blog developed with Next.js, TypeScript, Tailwind CSS, and Contentful. <br>
-Feel free to raise an issue or pull request here :)
+Feel free to raise an issue or pull request here!
 
 # Showcase
 https://ryo-m.net

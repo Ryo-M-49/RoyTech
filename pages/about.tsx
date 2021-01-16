@@ -17,7 +17,12 @@ interface Props {
 
 const About: React.FC<Props> = ({ books }) => {
     return (
-        <PageLayout ogTitle="About" ogPath="/about" ogType="article">
+        <PageLayout
+            ogTitle="About"
+            ogPath="/about"
+            ogType="article"
+            ogImage="https://user-images.githubusercontent.com/57619070/104796298-4ec56f80-57f8-11eb-81bb-8ad6a2676c70.png"
+        >
             <div className="w-full md:max-w-5xl md:mx-auto">
                 <Top />
                 <Skills />

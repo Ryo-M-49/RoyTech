@@ -48,7 +48,12 @@ const PostDetail: React.FC<Props> = ({
     slug,
 }) => {
     return (
-        <PageLayout ogTitle={title} ogPath={`/blog/${slug}`} ogType="article">
+        <PageLayout
+            ogTitle={title}
+            ogPath={`/blog/${slug}`}
+            ogType="article"
+            ogImage={`https://${coverImage.file.url}`}
+        >
             <div className="md:w-3/4 mx-auto mb-10">
                 <PageTop coverImage={coverImage} title={title} />
                 <div className="md:w-3/4 px-3 md:mx-auto">

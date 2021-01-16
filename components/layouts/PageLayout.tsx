@@ -1,7 +1,6 @@
 import Header from 'components/layouts/Header';
 import Footer from 'components/layouts/Footer';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import 'tailwindcss/tailwind.css';
 
 type Props = {

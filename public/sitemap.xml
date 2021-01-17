@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      
+	<url>
+		<loc>https://ryo-m.net/404</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/about</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/blog/blog</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/blog/create-icon-list</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/blog/eslint-prettier-setup</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/blog/github-language-ratio</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/blog/readable-code</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/blog</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/index</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+
+	<url>
+		<loc>https://ryo-m.net/work</loc>
+		<lastmod>2021-01-17</lastmod>
+	</url>
+</urlset>

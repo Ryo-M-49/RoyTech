@@ -40,14 +40,13 @@ const PageLayout: React.FC<Props> = ({
                 <meta name="twitter:title" content={ogTitle} />
                 <meta name="twitter:image" content={encodeURI(image)} />
             </Head>
-            <div className="flex flex-col h-screen w-full bg-white">
+            <div className="flex flex-col h-screen w-full bg-white mb-10">
                 <Header />
                 <div
                     className={`flex-1 overflow-y-auto page-wrapper ${className}`}
                 >
                     {children}
                 </div>
-                <Footer />
             </div>
         </>
     );

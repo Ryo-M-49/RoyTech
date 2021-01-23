@@ -40,12 +40,12 @@ const options = {
         },
         ul: {
             props: {
-                className: 'list-disc mx-10',
+                className: 'list-disc list-inside my-3',
             },
         },
         img: {
             props: {
-                className: 'my-10',
+                className: 'my-5',
             },
         },
         a: {

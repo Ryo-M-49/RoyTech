@@ -64,7 +64,7 @@ const Header: React.FC = () => {
     }
 
     return (
-        <header className="py-2 md:py-5 px-5 ">
+        <header className="mt-0 fixed w-full z-10 top-0 py-2 md:py-5 px-5 bg-white">
             <div className="flex justify-between items-center">
                 <Link href="/">
                     <a className="text-2xl">

@@ -17,7 +17,7 @@ interface Props {
 
 const Author: React.FC<Props> = ({ author, date }) => {
     return (
-        <div className="flex items-center">
+        <div className="flex items-center my-5">
             <img
                 src={`https:${author.image.fields.file.url}`}
                 alt="author"

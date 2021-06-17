@@ -9,7 +9,6 @@ import Skills from 'components/about/Skills';
 import Qualifications from 'components/about/Qualifications';
 import History from 'components/about/History';
 import CurrentlyReading from 'components/about/CurrentlyReading';
-import Sns from 'components/about/Sns';
 
 interface Props {
     books: Book[];
@@ -29,7 +28,6 @@ const About: React.FC<Props> = ({ books }) => {
                 <Qualifications />
                 <History />
                 <CurrentlyReading books={books} />
-                <Sns />
             </div>
         </PageLayout>
     );
